@@ -17,135 +17,201 @@
   </em>
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/PROJETO-INICIAÇÃO%20CIENTÍFICA-blue">
-  <img src="https://img.shields.io/badge/LOCAL-UFBA-20A39E">
-  <img src="https://img.shields.io/badge/TEMA-RAÇA%20E%20GÊNERO-purple">
-  <img src="https://img.shields.io/badge/ÁREA-CIÊNCIAS%20HUMANAS-yellow">
-</p>
-
----
-
-<h2>📚 SOBRE O PROJETO</h2>
-
-<p>
-O Observatório Mulheres Negras na Ciência é uma iniciativa
-vinculada a uma pesquisa de Iniciação Científica que busca
-investigar as condições de trabalho, reconhecimento e
-permanência de mulheres negras na produção científica
-da Universidade Federal da Bahia (UFBA).
-</p>
-
-<p>
-A pesquisa parte da compreensão de que a presença de
-mulheres negras nas universidades não significa,
-necessariamente, igualdade de oportunidades, valorização
-profissional ou reconhecimento intelectual.
-</p>
-
-<p>
-Por meio da investigação das desigualdades raciais e de
-gênero no espaço acadêmico, o projeto busca compreender
-os desafios enfrentados por essas mulheres e dar
-visibilidade às suas trajetórias e contribuições para
-a produção do conhecimento científico.
-</p>
-
----
-
-<h2>🎯 OBJETIVO DA PESQUISA</h2>
-
-<p>
-Analisar como as desigualdades raciais e de gênero
-influenciam as condições de trabalho, reconhecimento
-e permanência de mulheres negras na produção científica
-da Universidade Federal da Bahia (UFBA).
-</p>
-
----
-
-<h2>🔎 EIXOS DE INVESTIGAÇÃO</h2>
-
-<ul>
-  <li>Mulheres negras e produção científica;</li>
-  <li>Racismo institucional e desigualdades de gênero;</li>
-  <li>Condições de trabalho no ambiente acadêmico;</li>
-  <li>Reconhecimento e valorização intelectual;</li>
-  <li>Permanência de mulheres negras na universidade;</li>
-  <li>Democratização do conhecimento científico.</li>
-</ul>
-
----
-
-<h2>📖 REFERENCIAL TEÓRICO</h2>
-
-<p>
-A pesquisa dialoga com intelectuais que contribuem
-para os estudos sobre raça, gênero, classe, trabalho
-e produção do conhecimento.
-</p>
-
-<ul>
-  <li>Lélia Gonzalez;</li>
-  <li>Sueli Carneiro;</li>
-  <li>Patricia Hill Collins;</li>
-  <li>Carla Akotirene;</li>
-  <li>Ana Cláudia Lemos Pacheco.</li>
-</ul>
-
----
-
-<h2>🗂️ SOBRE O ACERVO</h2>
-
-<p>
-Este repositório também organiza materiais e informações
-relacionados à pesquisa, constituindo um espaço de
-documentação, memória e divulgação científica.
-</p>
-
-<ul>
-  <li><strong>Biblioteca:</strong> livros, artigos e publicações;</li>
-  <li><strong>Pesquisadoras:</strong> trajetórias de mulheres negras na ciência;</li>
-  <li><strong>Documentos:</strong> relatórios e materiais institucionais;</li>
-  <li><strong>Notícias:</strong> informações sobre ciência, raça e gênero;</li>
-  <li><strong>Referências:</strong> fontes bibliográficas e documentais.</li>
-</ul>
-
----
-
-<h2>🏛️ INSTITUIÇÃO</h2>
-
-<p>
-<strong>Instituição de investigação:</strong>
-Universidade Federal da Bahia (UFBA).
-</p>
-
-<p>
-<strong>Localização:</strong> Salvador — Bahia, Brasil.
-</p>
-
-<p>
-<strong>Modalidade:</strong> Iniciação Científica.
-</p>
-
----
-
-<h2>✊🏿 NOSSO COMPROMISSO</h2>
+<br>
 
 <p align="center">
-  <strong>
-    Reconhecer mulheres negras na ciência é reconhecer
-    suas histórias, suas produções intelectuais e seu
-    direito de ocupar, produzir e permanecer nos espaços
-    de construção do conhecimento.
-  </strong>
+  <img src="https://img.shields.io/badge/INICIAÇÃO_CIENTÍFICA-955331?style=for-the-badge">
+  <img src="https://img.shields.io/badge/CIÊNCIAS_HUMANAS-713B22?style=for-the-badge">
+  <img src="https://img.shields.io/badge/UFBA-292622?style=for-the-badge">
+</p>
+
+<br>
+
+<h2 align="center">✦ SOBRE O PROJETO ✦</h2>
+
+<p align="center">
+  O <strong>Observatório Mulheres Negras na Ciência</strong> é uma proposta
+  de plataforma digital vinculada a uma pesquisa de Iniciação Científica
+  que investiga as desigualdades raciais e de gênero presentes na produção
+  científica, com atenção às condições de trabalho, ao reconhecimento
+  intelectual e às possibilidades de permanência de mulheres negras
+  na Universidade Federal da Bahia (UFBA).
+</p>
+
+<p align="center">
+  A iniciativa busca reunir informações, referências, discussões,
+  indicadores e materiais acadêmicos que contribuam para dar visibilidade
+  às trajetórias de mulheres negras na ciência.
 </p>
 
 <hr>
 
+<h2 align="center">✦ IDENTIFICAÇÃO DA PESQUISA ✦</h2>
+
+<div align="center">
+
+| INFORMAÇÃO | DESCRIÇÃO |
+|:---:|:---:|
+| Pesquisadora | Aiume Luzia Santos de Almeida |
+| Orientadora | Vanessa Coelho |
+| Instituição | Escola SESI Milton Santos |
+| Área | Ciências Humanas |
+| Subárea | Sociologia do Trabalho |
+| Universidade investigada | Universidade Federal da Bahia — UFBA |
+| Localização | Salvador — Bahia |
+| Modalidade | Iniciação Científica |
+
+</div>
+
+<hr>
+
+<h2 align="center">✦ PROBLEMA DE PESQUISA ✦</h2>
+
 <p align="center">
-  <em>Pesquisa, memória, reconhecimento e transformação social.</em>
+  Como as desigualdades raciais e de gênero presentes na estrutura
+  universitária influenciam as condições de trabalho, o reconhecimento
+  e as possibilidades de permanência de mulheres negras na produção
+  científica da Universidade Federal da Bahia?
+</p>
+
+<hr>
+
+<h2 align="center">✦ HIPÓTESE ✦</h2>
+
+<p align="center">
+  A ampliação do acesso de mulheres negras ao ensino superior não elimina,
+  por si só, as desigualdades presentes na produção científica.
+  Fatores econômicos, institucionais e simbólicos podem interferir
+  no acesso a oportunidades, no financiamento, no reconhecimento
+  intelectual e na continuidade das trajetórias acadêmicas.
+</p>
+
+<hr>
+
+<h2 align="center">✦ OBJETIVOS ✦</h2>
+
+<h3 align="center">Objetivo geral</h3>
+
+<p align="center">
+  Analisar como as desigualdades raciais e de gênero influenciam
+  as condições de trabalho, o reconhecimento e a permanência
+  de mulheres negras na produção científica da UFBA.
+</p>
+
+<h3 align="center">Objetivos específicos</h3>
+
+- Investigar as relações entre raça, gênero e trabalho científico.
+- Identificar obstáculos materiais, institucionais e simbólicos.
+- Examinar o acesso a bolsas, financiamentos e oportunidades de pesquisa.
+- Refletir sobre o reconhecimento do trabalho intelectual.
+- Identificar políticas de inclusão e permanência.
+- Contribuir para o debate sobre a democratização da ciência.
+
+<hr>
+
+<h2 align="center">✦ REFERENCIAL TEÓRICO ✦</h2>
+
+<p align="center">
+  A pesquisa dialoga com estudos sobre feminismo negro,
+  relações raciais, gênero, divisão do trabalho e produção
+  do conhecimento.
+</p>
+
+<div align="center">
+
+| AUTORAS | CONTRIBUIÇÕES |
+|:---:|:---|
+| Lélia Gonzalez | Relações raciais, gênero e sociedade brasileira. |
+| Sueli Carneiro | Racismo, sexismo e produção de conhecimento. |
+| Patricia Hill Collins | Pensamento feminista negro. |
+| Carla Akotirene | Interseccionalidade e relações de poder. |
+| Ana Cláudia Lemos Pacheco | Mulheres negras, gênero e raça. |
+| Cecília Maria Bacellar Sardenberg | Estudos feministas e relações de gênero. |
+
+</div>
+
+<hr>
+
+<h2 align="center">✦ METODOLOGIA ✦</h2>
+
+<p align="center">
+  A pesquisa possui abordagem predominantemente qualitativa,
+  de caráter exploratório e analítico.
+</p>
+
+**Etapas previstas:**
+
+1. Levantamento bibliográfico e aprofundamento teórico.
+2. Levantamento e análise de documentos institucionais.
+3. Organização das informações e possível realização de entrevistas,
+   conforme viabilidade e procedimentos éticos.
+4. Análise dos materiais e sistematização da pesquisa.
+
+<hr>
+
+<h2 align="center">✦ EIXOS DE INVESTIGAÇÃO ✦</h2>
+
+<div align="center">
+
+| EIXO | TEMA |
+|:---:|:---|
+| 01 | Raça, gênero e trabalho científico |
+| 02 | Condições materiais e institucionais |
+| 03 | Financiamento e oportunidades acadêmicas |
+| 04 | Reconhecimento e valorização intelectual |
+| 05 | Permanência e continuidade profissional |
+
+</div>
+
+<hr>
+
+<h2 align="center">✦ DADOS E INDICADORES ✦</h2>
+
+<p align="center">
+  A pesquisa prevê a consulta a fontes institucionais e bases públicas
+  para identificar informações relevantes sobre educação,
+  participação acadêmica e produção científica.
 </p>
 
 <p align="center">
-  Salvad
+  <a href="https://www.gov.br/inep/pt-br">INEP</a> •
+  <a href="https://www.gov.br/cnpq/pt-br">CNPq</a> •
+  <a href="https://www.gov.br/capes/pt-br">CAPES</a> •
+  <a href="https://www.ufba.br/">UFBA</a>
+</p>
+
+<hr>
+
+<h2 align="center">✦ RESULTADOS ESPERADOS ✦</h2>
+
+<p align="center">
+  Espera-se contribuir para a compreensão das desigualdades
+  que atravessam as trajetórias de mulheres negras na ciência,
+  ampliar a visibilidade de suas experiências e estimular
+  reflexões sobre reconhecimento, financiamento e permanência
+  nos espaços universitários.
+</p>
+
+<p align="center">
+  Os resultados serão apresentados conforme o desenvolvimento
+  efetivo da investigação.
+</p>
+
+<hr>
+
+<h2 align="center">✦ ESTRUTURA DO SITE ✦</h2>
+
+```text
+OBSERVATORIO-MULHERES-NEGRAS-NA-CIENCIA/
+│
+├── index.html
+├── style.css
+├── script.js
+│
+└── pesquisas/
+    ├── index.html
+    ├── referencial-teorico.html
+    ├── metodologia.html
+    ├── dados-e-indicadores.html
+    ├── resultados.html
+    └── publicacoes.html
