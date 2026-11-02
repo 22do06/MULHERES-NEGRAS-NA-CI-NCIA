@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Conheça o Observatório Mulheres Negras na Ciência e a pesquisa sobre condições de permanência de mulheres negras na UFBA.">
+<title>Sobre a Pesquisa | Observatório Mulheres Negras na Ciência</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --fundo: #F7F5F1;
+    --marrom: #292622;
+    --marrom-claro: #43291D;
+    --terracota: #955331;
+    --terracota-escuro: #713B22;
+    --bege: #EEE8DF;
+    --texto: #292724;
+    --branco: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--fundo);
+    color: var(--texto);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* CABEÇALHO */
+
+header {
+    background: var(--marrom);
+    color: white;
+    padding: 17px 6%;
+    position: relative;
+    z-index: 10;
+}
+
+.cabecalho {
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+.logo-simbolo {
+    width: 53px;
+    height: 53px;
+    display: grid;
+    place-items: center;
+    background: var(--terracota);
+    border-radius: 50%;
+    font-size: 29px;
+}
+
+nav {
+    display: flex;
+    gap: 22px;
+    align-items: center;
+}
+
+nav a {
+    color: #F2E9DF;
+    font-size: 13px;
+    transition: .3s;
+}
+
+nav a:hover,
+nav a.ativo {
+    color: #D88A59;
+}
+
+.menu-botao {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* CAPA */
+
+.capa {
+    background:
+        radial-gradient(circle at 80% 30%, rgba(183, 103, 59, .35), transparent 30%),
+        linear-gradient(120deg, #292622, #513122 65%, #75432B);
+    color: white;
+    padding: 100px 8% 110px;
+    position: relative;
+    overflow: hidden;
+}
+
+.capa::after {
+    content: "✳";
+    position: absolute;
+    right: 7%;
+    top: -60px;
+    font-size: 350px;
+    color: rgba(255,255,255,.045);
+}
+
+.capa-conteudo {
+    max-width: 900px;
+    position: relative;
+    z-index: 1;
+}
+
+.capa small {
+    color: #E3A078;
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-size: 12px;
+}
+
+.capa h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(45px, 7vw, 78px);
+    line-height: 1.05;
+    margin: 25px 0;
+}
+
+.capa h1 span {
+    color: #D88A59;
+}
+
+.capa p {
+    max-width: 700px;
+    color: #E9D9CB;
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    line-height: 1.6;
+}
+
+/* NAVEGAÇÃO INTERNA */
+
+.trilha {
+    padding: 18px 8%;
+    background: var(--bege);
+    font-size: 13px;
+    color: #71665D;
+}
+
+.trilha a {
+    color: var(--terracota-escuro);
+    font-weight: 700;
+}
+
+/* INTRODUÇÃO */
+
+.introducao {
+    padding: 90px 8%;
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.etiqueta {
+    color: var(--terracota);
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.introducao h2,
+.secao h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--marrom-claro);
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.15;
+    margin: 20px 0;
+}
+
+.introducao p,
+.secao p {
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 17px;
+}
+
+.destaque-lateral {
+    background: var(--bege);
+    padding: 42px;
+    border-left: 5px solid var(--terracota);
+    position: relative;
+}
+
+.destaque-lateral span {
+    color: var(--terracota);
+    font-size: 42px;
+}
+
+.destaque-lateral p {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    line-height: 1.5;
+    color: var(--marrom-claro);
+    margin-top: 15px;
+}
+
+/* PROBLEMA DE PESQUISA */
+
+.problema {
+    background: var(--bege);
+    padding: 85px 8%;
+}
+
+.problema-conteudo {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.problema h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 4vw, 48px);
+    color: var(--marrom-claro);
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+.problema-texto {
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+/* OBJETIVOS */
+
+.secao {
+    padding: 85px 8%;
+}
+
+.objetivos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 35px;
+}
+
+.objetivo {
+    background: white;
+    padding: 30px;
+    border-bottom: 3px solid var(--terracota);
+}
+
+.objetivo-numero {
+    color: var(--terracota);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.objetivo h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--marrom-claro);
+    font-size: 23px;
+    margin: 15px 0;
+}
+
+.objetivo p {
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* EIXOS */
+
+.eixos {
+    background: var(--marrom-claro);
+    color: white;
+    padding: 85px 8%;
+}
+
+.eixos .etiqueta {
+    color: #E3A078;
+}
+
+.eixos h2 {
+    color: white;
+}
+
+.eixos-intro {
+    max-width: 700px;
+}
+
+.eixos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.eixo {
+    padding: 28px;
+    border: 1px solid rgba(255,255,255,.2);
+    min-height: 190px;
+}
+
+.eixo span {
+    color: #D88A59;
+    font-size: 30px;
+}
+
+.eixo h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    margin: 18px 0 10px;
+}
+
+.eixo p {
+    color: #E8D8CA;
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* JUSTIFICATIVA */
+
+.justificativa {
+    background: var(--fundo);
+    padding: 90px 8%;
+}
+
+.justificativa-conteudo {
+    max-width: 900px;
+    margin: auto;
+}
+
+.justificativa h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 4vw, 48px);
+    color: var(--marrom-claro);
+    margin: 20px 0;
+}
+
+.justificativa p {
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+/* IDENTIFICAÇÃO */
+
+.identificacao {
+    background: #E8D9C9;
+    padding: 65px 8%;
+}
+
+.identificacao-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.identificacao-item {
+    border-left: 2px solid var(--terracota);
+    padding-left: 20px;
+}
+
+.identificacao-item span {
+    color: var(--terracota-escuro);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.identificacao-item h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--marrom-claro);
+    font-size: 21px;
+    margin-top: 10px;
+}
+
+/* CHAMADA */
+
+.chamada {
+    padding: 75px 8%;
+    text-align: center;
+    background: var(--terracota-escuro);
+    color: white;
+}
+
+.chamada h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(30px, 4vw, 45px);
+    max-width: 850px;
+    margin: 0 auto 20px;
+}
+
+.chamada p {
+    color: #F0DCCB;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.botao {
+    display: inline-block;
+    background: #F7F0E6;
+    color: var(--terracota-escuro);
+    padding: 14px 25px;
+    border-radius: 30px;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.botao:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+/* RODAPÉ */
+
+footer {
+    background: var(--marrom);
+    color: white;
+    padding: 45px 8% 20px;
+}
+
+.rodape-conteudo {
+    max-width: 1300px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    gap: 30px;
+    align-items: center;
+    padding-bottom: 35px;
+}
+
+.rodape-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+}
+
+.rodape-texto {
+    border-left: 1px solid var(--terracota);
+    padding-left: 25px;
+    color: #E5D5C7;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.rodape-ufba {
+    text-align: right;
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+}
+
+.rodape-final {
+    border-top: 1px solid #68432F;
+    padding-top: 20px;
+    text-align: center;
+    color: #CDB9A8;
+    font-size: 12px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 950px) {
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    .introducao {
+        gap: 35px;
+    }
+}
+
+@media (max-width: 760px) {
+    header {
+        padding: 15px 6%;
+    }
+
+    .menu-botao {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 25px 7%;
+        background: var(--marrom);
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav.aberto {
+        display: flex;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .capa {
+        padding: 75px 7%;
+    }
+
+    .capa h1 {
+        font-size: 48px;
+    }
+
+    .capa p {
+        font-size: 18px;
+    }
+
+    .introducao {
+        grid-template-columns: 1fr;
+        padding: 65px 7%;
+    }
+
+    .problema,
+    .secao,
+    .eixos,
+    .justificativa {
+        padding: 65px 7%;
+    }
+
+    .objetivos-grid,
+    .eixos-grid,
+    .identificacao-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rodape-conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .rodape-texto {
+        border-left: none;
+        border-top: 1px solid var(--terracota);
+        padding: 20px 0 0;
+    }
+
+    .rodape-ufba {
+        text-align: left;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="cabecalho">
+
+        <a href="index.html" class="logo">
+            <span class="logo-simbolo">✳</span>
+            <span>Observatório<br>Mulheres Negras<br>na Ciência</span>
+        </a>
+
+        <button class="menu-botao" id="menuBotao" aria-label="Abrir menu" aria-expanded="false">☰</button>
+
+        <nav id="menu">
+            <a href="index.html">Início</a>
+            <a href="sobre.html" class="ativo">Sobre</a>
+            <a href="pesquisas/index.html">Pesquisa</a>
+            <a href="pesquisas/referencial-teorico.html">Referencial Teórico</a>
+            <a href="pesquisas/metodologia.html">Metodologia</a>
+            <a href="pesquisas/dados-e-indicadores.html">Dados e Indicadores</a>
+            <a href="pesquisas/resultados.html">Resultados</a>
+            <a href="pesquisas/publicacoes.html">Publicações</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<main>
+
+    <section class="capa">
+        <div class="capa-conteudo">
+            <small>CONHEÇA O OBSERVATÓRIO</small>
+
+            <h1>
+                Sobre a<br>
+                <span>pesquisa</span>
+            </h1>
+
+            <p>
+                Investigar as desigualdades, reconhecer trajetórias
+                e refletir sobre as condições de permanência de
+                mulheres negras na produção científica.
+            </p>
+        </div>
+    </section>
+
+
+    <div class="trilha">
+        <a href="index.html">Início</a> / Sobre
+    </div>
+
+
+    <section class="introducao">
+
+        <div>
+            <span class="etiqueta">APRESENTAÇÃO</span>
+
+            <h2>Por que olhar para as mulheres negras na ciência?</h2>
+
+            <p>
+                A ciência é um espaço de produção de conhecimento,
+                disputas, reconhecimento e construção de oportunidades.
+                Entretanto, as possibilidades de participação e permanência
+                nesse espaço não são iguais para todas as pessoas.
+            </p>
+
+            <p>
+                Esta pesquisa busca compreender como as desigualdades
+                raciais e de gênero atravessam as experiências profissionais
+                e acadêmicas de mulheres negras vinculadas à produção
+                científica da Universidade Federal da Bahia (UFBA),
+                em Salvador, Bahia.
+            </p>
+
+            <p>
+                O olhar da investigação está voltado às condições de
+                trabalho, ao reconhecimento intelectual, ao acesso a
+                oportunidades e às possibilidades de continuidade
+                na carreira científica.
+            </p>
+        </div>
+
+        <aside class="destaque-lateral">
+            <span>✳</span>
+            <p>
+                Quem tem condições de produzir conhecimento?
+                Quem é reconhecida por ele? E quem consegue
+                permanecer na ciência?
+            </p>
+        </aside>
+
+    </section>
+
+
+    <section class="problema">
+
+        <div class="problema-conteudo">
+            <span class="etiqueta">PROBLEMA DE PESQUISA</span>
+
+            <h2>
+                Como as desigualdades raciais e de gênero
+                influenciam a permanência na ciência?
+            </h2>
+
+            <p class="problema-texto">
+                Como as desigualdades raciais e de gênero presentes na
+                estrutura universitária influenciam as condições de trabalho,
+                o reconhecimento e as possibilidades de permanência de
+                mulheres negras na produção científica da Universidade
+                Federal da Bahia?
+            </p>
+        </div>
+
+    </section>
+
+
+    <section class="secao">
+
+        <span class="etiqueta">O QUE PRETENDEMOS INVESTIGAR</span>
+
+        <h2>Objetivos da pesquisa</h2>
+
+        <p>
+            A investigação procura analisar as relações entre raça,
+            gênero e trabalho científico, considerando os fatores
+            materiais, institucionais e simbólicos que atravessam
+            as trajetórias de mulheres negras.
+        </p>
+
+        <div class="objetivos-grid">
+
+            <article class="objetivo">
+                <span class="objetivo-numero">OBJETIVO 01</span>
+                <h3>Desigualdades no trabalho científico</h3>
+                <p>
+                    Analisar as relações entre raça, gênero e trabalho
+                    nas experiências de mulheres negras na universidade.
+                </p>
+            </article>
+
+            <article class="objetivo">
+                <span class="objetivo-numero">OBJETIVO 02</span>
+                <h3>Obstáculos à permanência</h3>
+                <p>
+                    Investigar barreiras materiais, institucionais e
+                    simbólicas que podem dificultar a continuidade
+                    na produção científica.
+                </p>
+            </article>
+
+            <article class="objetivo">
+                <span class="objetivo-numero">OBJETIVO 03</span>
+                <h3>Oportunidades acadêmicas</h3>
+                <p>
+                    Examinar o acesso a bolsas, financiamento,
+                    grupos de pesquisa e outros espaços acadêmicos.
+                </p>
+            </article>
+
+            <article class="objetivo">
+                <span class="objetivo-numero">OBJETIVO 04</span>
+                <h3>Reconhecimento intelectual</h3>
+                <p>
+                    Refletir sobre a valorização das contribuições
+                    e da produção intelectual de mulheres negras.
+                </p>
+            </article>
+
+            <article class="objetivo">
+                <span class="objetivo-numero">OBJETIVO 05</span>
+                <h3>Políticas institucionais</h3>
+                <p>
+                    Identificar políticas e iniciativas relacionadas
+                    à inclusão, ao reconhecimento e à permanência.
+                </p>
+            </article>
+
+            <article class="objetivo">
+                <span class="objetivo-numero">OBJETIVO 06</span>
+                <h3>Democratização da ciência</h3>
+                <p>
+                    Contribuir para o debate sobre uma produção
+                    científica mais diversa, justa e plural.
+                </p>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <section class="eixos">
+
+        <div class="eixos-intro">
+            <span class="etiqueta">PERSPECTIVAS DA INVESTIGAÇÃO</span>
+            <h2>Três dimensões para compreender a permanência</h2>
+            <p>
+                A pesquisa considera diferentes aspectos da experiência
+                acadêmica e profissional, sem reduzir a permanência
+                científica ao esforço individual.
+            </p>
+        </div>
+
+        <div class="eixos-grid">
+
+            <article class="eixo">
+                <span>01</span>
+                <h3>Condições materiais</h3>
+                <p>
+                    Trabalho, bolsas, financiamento, recursos e
+                    oportunidades para desenvolver pesquisas.
+                </p>
+            </article>
+
+            <article class="eixo">
+                <span>02</span>
+                <h3>Relações institucionais</h3>
+                <p>
+                    Acesso a espaços acadêmicos, grupos de pesquisa,
+                    redes de colaboração e políticas de permanência.
+                </p>
+            </article>
+
+            <article class="eixo">
+                <span>03</span>
+                <h3>Reconhecimento simbólico</h3>
+                <p>
+                    Valorização intelectual, visibilidade, autoria
+                    e reconhecimento das contribuições científicas.
+                </p>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <section class="justificativa">
+
+        <div class="justificativa-conteudo">
+            <span class="etiqueta">JUSTIFICATIVA</span>
+
+            <h2>Produzir ciência também é uma questão de justiça social</h2>
+
+            <p>
+                Discutir a presença de mulheres negras na ciência exige
+                ir além da análise do acesso à universidade. É necessário
+                observar as condições concretas que permitem participar,
+                desenvolver pesquisas, obter reconhecimento e construir
+                trajetórias profissionais.
+            </p>
+
+            <p>
+                A investigação se justifica pela importância de ampliar
+                o debate sobre as desigualdades raciais e de gênero na
+                produção científica, contribuindo para dar visibilidade
+                às experiências e às contribuições de mulheres negras.
+            </p>
+
+            <p>
+                Ao tomar a UFBA como referência, o estudo pretende
+                colaborar com reflexões sobre as condições de permanência
+                e sobre a democratização dos espaços de produção
+                do conhecimento.
+            </p>
+        </div>
+
+    </section>
+
+
+    <section class="identificacao">
+
+        <div class="identificacao-grid">
+
+            <div class="identificacao-item">
+                <span>PESQUISADORA</span>
+                <h3>Aiume Luzia Santos de Almeida</h3>
+            </div>
+
+            <div class="identificacao-item">
+                <span>ORIENTADORA</span>
+                <h3>Vanessa Coelho</h3>
+            </div>
+
+            <div class="identificacao-item">
+                <span>INSTITUIÇÃO</span>
+                <h3>Escola SESI Milton Santos</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="chamada">
+
+        <h2>
+            Conhecer as desigualdades é um passo para transformar
+            as condições de produção do conhecimento.
+        </h2>
+
+        <p>
+            Explore os referenciais, os caminhos metodológicos
+            e as dimensões desta investigação.
+        </p>
+
+        <a href="pesquisas/index.html" class="botao">
+            Conheça a pesquisa →
+        </a>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="rodape-conteudo">
+
+        <div class="rodape-logo">
+            <span class="logo-simbolo">✳</span>
+            <span>Observatório<br>Mulheres Negras<br>na Ciência</span>
+        </div>
+
+        <div class="rodape-texto">
+            Pesquisa sobre desigualdades profissionais e condições
+            de permanência na produção científica da Universidade
+            Federal da Bahia.
+        </div>
+
+        <div class="rodape-ufba">
+            UFBA
+        </div>
+
+    </div>
+
+    <div class="rodape-final">
+        © <span id="ano"></span> Observatório Mulheres Negras na Ciência.
+        Projeto de pesquisa em desenvolvimento.
+    </div>
+
+</footer>
+
+
+<script>
+const botaoMenu = document.getElementById("menuBotao");
+const menu = document.getElementById("menu");
+
+botaoMenu.addEventListener("click", function () {
+    const aberto = menu.classList.toggle("aberto");
+
+    botaoMenu.setAttribute("aria-expanded", aberto);
+    botaoMenu.textContent = aberto ? "✕" : "☰";
+});
+
+menu.querySelectorAll("a").forEach(function (link) {
+    link.addEventListener("click", function () {
+        menu.classList.remove("aberto");
+        botaoMenu.setAttribute("aria-expanded", "false");
+        botaoMenu.textContent = "☰";
+    });
+});
+
+document.getElementById("ano").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Referencial teórico da pesquisa sobre mulheres negras, desigualdades profissionais e permanência na ciência.">
+<title>Referencial Teórico | Observatório Mulheres Negras na Ciência</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --fundo: #F7F5F1;
+    --marrom: #292622;
+    --marrom-claro: #43291D;
+    --terracota: #955331;
+    --terracota-escuro: #713B22;
+    --bege: #EEE8DF;
+    --texto: #292724;
+    --branco: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--fundo);
+    color: var(--texto);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* CABEÇALHO */
+
+header {
+    background: var(--marrom);
+    color: white;
+    padding: 17px 6%;
+    position: relative;
+    z-index: 10;
+}
+
+.cabecalho {
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+.logo-simbolo {
+    width: 53px;
+    height: 53px;
+    display: grid;
+    place-items: center;
+    background: var(--terracota);
+    border-radius: 50%;
+    font-size: 29px;
+}
+
+nav {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+
+nav a {
+    color: #F2E9DF;
+    font-size: 12px;
+    transition: .3s;
+}
+
+nav a:hover,
+nav a.ativo {
+    color: #D88A59;
+}
+
+.menu-botao {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* CAPA */
+
+.capa {
+    background:
+        radial-gradient(circle at 80% 30%, rgba(183, 103, 59, .35), transparent 30%),
+        linear-gradient(120deg, #292622, #513122 65%, #75432B);
+    color: white;
+    padding: 100px 8% 110px;
+    position: relative;
+    overflow: hidden;
+}
+
+.capa::after {
+    content: "✳";
+    position: absolute;
+    right: 7%;
+    top: -60px;
+    font-size: 350px;
+    color: rgba(255,255,255,.045);
+}
+
+.capa-conteudo {
+    max-width: 900px;
+    position: relative;
+    z-index: 1;
+}
+
+.capa small {
+    color: #E3A078;
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-size: 12px;
+}
+
+.capa h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(43px, 7vw, 76px);
+    line-height: 1.05;
+    margin: 25px 0;
+}
+
+.capa h1 span {
+    color: #D88A59;
+}
+
+.capa p {
+    max-width: 700px;
+    color: #E9D9CB;
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    line-height: 1.6;
+}
+
+/* TRILHA */
+
+.trilha {
+    padding: 18px 8%;
+    background: var(--bege);
+    font-size: 13px;
+    color: #71665D;
+}
+
+.trilha a {
+    color: var(--terracota-escuro);
+    font-weight: 700;
+}
+
+/* INTRODUÇÃO */
+
+.introducao {
+    max-width: 1200px;
+    margin: auto;
+    padding: 85px 7%;
+}
+
+.etiqueta {
+    color: var(--terracota);
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--marrom-claro);
+    font-size: clamp(32px, 4vw, 46px);
+    line-height: 1.15;
+    margin: 20px 0;
+}
+
+.introducao p,
+.texto-secao {
+    max-width: 900px;
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+/* EIXOS TEÓRICOS */
+
+.eixos {
+    background: var(--bege);
+    padding: 85px 8%;
+}
+
+.eixos-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.eixos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.eixo {
+    background: white;
+    padding: 28px;
+    border-bottom: 4px solid var(--terracota);
+    min-height: 220px;
+}
+
+.eixo-numero {
+    color: var(--terracota);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.eixo h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    color: var(--marrom-claro);
+    margin: 18px 0 12px;
+}
+
+.eixo p {
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* AUTORAS */
+
+.autoras {
+    padding: 85px 7%;
+}
+
+.autoras-container {
+    max-width: 1250px;
+    margin: auto;
+}
+
+.autoras-intro {
+    max-width: 850px;
+    margin-bottom: 40px;
+}
+
+.autoras-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.autora {
+    background: white;
+    border: 1px solid #DED7CE;
+    transition: .3s;
+    overflow: hidden;
+}
+
+.autora:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(60, 35, 20, .09);
+}
+
+.autora-cabecalho {
+    height: 125px;
+    background: linear-gradient(135deg, #543322, #A15E39);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #F4DCC7;
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+}
+
+.autora-conteudo {
+    padding: 25px;
+}
+
+.autora-categoria {
+    color: var(--terracota);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+}
+
+.autora h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--marrom-claro);
+    font-size: 23px;
+    margin: 12px 0;
+}
+
+.autora p {
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* RELAÇÃO COM A PESQUISA */
+
+.relacao {
+    background: var(--marrom-claro);
+    color: white;
+    padding: 85px 8%;
+}
+
+.relacao-container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.relacao .etiqueta {
+    color: #E3A078;
+}
+
+.relacao h2 {
+    color: white;
+}
+
+.relacao p {
+    color: #E8D8CA;
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+.relacao-destaque {
+    margin-top: 30px;
+    padding: 25px;
+    border: 1px solid rgba(255,255,255,.25);
+    color: #F2D6C0;
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    line-height: 1.5;
+}
+
+/* REFERÊNCIAS */
+
+.referencias {
+    padding: 85px 8%;
+}
+
+.referencias-container {
+    max-width: 1050px;
+    margin: auto;
+}
+
+.referencia {
+    padding: 20px 0;
+    border-bottom: 1px solid #DED7CE;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.referencia strong {
+    color: var(--marrom-claro);
+}
+
+/* NOTA */
+
+.nota {
+    max-width: 1050px;
+    margin: 0 auto 85px;
+    padding: 25px 30px;
+    background: var(--bege);
+    border-left: 5px solid var(--terracota);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* CHAMADA */
+
+.chamada {
+    background: var(--terracota-escuro);
+    color: white;
+    text-align: center;
+    padding: 75px 8%;
+}
+
+.chamada h2 {
+    color: white;
+    max-width: 850px;
+    margin: 0 auto 20px;
+}
+
+.chamada p {
+    color: #F0DCCB;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.botao {
+    display: inline-block;
+    background: #F7F0E6;
+    color: var(--terracota-escuro);
+    padding: 14px 25px;
+    border-radius: 30px;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.botao:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+/* RODAPÉ */
+
+footer {
+    background: var(--marrom);
+    color: white;
+    padding: 45px 8% 20px;
+}
+
+.rodape-conteudo {
+    max-width: 1300px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    gap: 30px;
+    align-items: center;
+    padding-bottom: 35px;
+}
+
+.rodape-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+}
+
+.rodape-texto {
+    border-left: 1px solid var(--terracota);
+    padding-left: 25px;
+    color: #E5D5C7;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.rodape-ufba {
+    text-align: right;
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+}
+
+.rodape-final {
+    border-top: 1px solid #68432F;
+    padding-top: 20px;
+    text-align: center;
+    color: #CDB9A8;
+    font-size: 12px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 950px) {
+    nav { gap: 10px; }
+    nav a { font-size: 10px; }
+}
+
+@media (max-width: 760px) {
+    header { padding: 15px 6%; }
+
+    .menu-botao { display: block; }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 25px 7%;
+        background: var(--marrom);
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav.aberto { display: flex; }
+    nav a { font-size: 14px; }
+
+    .capa { padding: 75px 7%; }
+    .capa h1 { font-size: 46px; }
+    .capa p { font-size: 18px; }
+
+    .introducao,
+    .autoras,
+    .eixos,
+    .relacao,
+    .referencias {
+        padding: 65px 7%;
+    }
+
+    .eixos-grid,
+    .autoras-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nota {
+        margin: 0 7% 65px;
+    }
+
+    .rodape-conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .rodape-texto {
+        border-left: none;
+        border-top: 1px solid var(--terracota);
+        padding: 20px 0 0;
+    }
+
+    .rodape-ufba { text-align: left; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="cabecalho">
+
+        <a href="../index.html" class="logo">
+            <span class="logo-simbolo">✳</span>
+            <span>Observatório<br>Mulheres Negras<br>na Ciência</span>
+        </a>
+
+        <button class="menu-botao" id="menuBotao" aria-label="Abrir menu" aria-expanded="false">☰</button>
+
+        <nav id="menu">
+            <a href="../index.html">Início</a>
+            <a href="../sobre.html">Sobre</a>
+            <a href="index.html">Pesquisa</a>
+            <a href="referencial-teorico.html" class="ativo">Referencial Teórico</a>
+            <a href="metodologia.html">Metodologia</a>
+            <a href="dados-e-indicadores.html">Dados e Indicadores</a>
+            <a href="resultados.html">Resultados</a>
+            <a href="publicacoes.html">Publicações</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<main>
+
+    <section class="capa">
+        <div class="capa-conteudo">
+            <small>BASES CONCEITUAIS DA INVESTIGAÇÃO</small>
+
+            <h1>
+                Referencial<br>
+                <span>teórico</span>
+            </h1>
+
+            <p>
+                Pensamento negro, feminismos, relações raciais,
+                gênero e trabalho: perspectivas para compreender
+                a permanência de mulheres negras na ciência.
+            </p>
+        </div>
+    </section>
+
+
+    <div class="trilha">
+        <a href="../index.html">Início</a> /
+        <a href="index.html">Pesquisa</a> /
+        Referencial Teórico
+    </div>
+
+
+    <section class="introducao">
+
+        <span class="etiqueta">FUNDAMENTAÇÃO DA PESQUISA</span>
+
+        <h2>Conhecimento, raça, gênero e trabalho</h2>
+
+        <p>
+            O referencial teórico desta investigação parte de perspectivas
+            críticas que permitem compreender como as relações raciais
+            e de gênero se articulam às estruturas sociais e institucionais.
+            Essas contribuições ajudam a analisar as experiências de
+            mulheres negras no mundo do trabalho e na produção científica.
+        </p>
+
+        <p>
+            O diálogo com intelectuais negras é fundamental para questionar
+            formas de desigualdade, invisibilização e desvalorização
+            intelectual, reconhecendo a produção de conhecimento
+            construída por mulheres negras.
+        </p>
+
+        <p>
+            As autoras apresentadas nesta página constituem referências
+            para o desenvolvimento da investigação. A articulação
+            entre suas obras será aprofundada ao longo da pesquisa.
+        </p>
+
+    </section>
+
+
+    <section class="eixos">
+
+        <div class="eixos-container">
+
+            <span class="etiqueta">CATEGORIAS DE ANÁLISE</span>
+
+            <h2>Conceitos que orientam o olhar da pesquisa</h2>
+
+            <div class="eixos-grid">
+
+                <article class="eixo">
+                    <span class="eixo-numero">01</span>
+                    <h3>Relações raciais</h3>
+                    <p>
+                        Compreender como o racismo estrutura relações
+                        sociais, oportunidades e experiências institucionais.
+                    </p>
+                </article>
+
+                <article class="eixo">
+                    <span class="eixo-numero">02</span>
+                    <h3>Gênero e interseccionalidade</h3>
+                    <p>
+                        Analisar como raça, gênero e outras relações
+                        de poder se articulam nas experiências sociais.
+                    </p>
+                </article>
+
+                <article class="eixo">
+                    <span class="eixo-numero">03</span>
+                    <h3>Trabalho e permanência</h3>
+                    <p>
+                        Investigar as condições materiais e institucionais
+                        que atravessam a continuidade na carreira científica.
+                    </p>
+                </article>
+
+                <article class="eixo">
+                    <span class="eixo-numero">04</span>
+                    <h3>Conhecimento e epistemologia</h3>
+                    <p>
+                        Refletir sobre quem produz conhecimento,
+                        quais saberes são reconhecidos e quem recebe visibilidade.
+                    </p>
+                </article>
+
+                <article class="eixo">
+                    <span class="eixo-numero">05</span>
+                    <h3>Reconhecimento intelectual</h3>
+                    <p>
+                        Observar a valorização da autoria, das contribuições
+                        e das trajetórias de pesquisadoras negras.
+                    </p>
+                </article>
+
+                <article class="eixo">
+                    <span class="eixo-numero">06</span>
+                    <h3>Desigualdades institucionais</h3>
+                    <p>
+                        Examinar como práticas, políticas e estruturas
+                        universitárias podem produzir diferenças de oportunidades.
+                    </p>
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="autoras">
+
+        <div class="autoras-container">
+
+            <div class="autoras-intro">
+                <span class="etiqueta">INTELECTUAIS E PESQUISADORAS</span>
+
+                <h2>Mulheres que ajudam a pensar a ciência e a sociedade</h2>
+
+                <p class="texto-secao">
+                    O diálogo com essas intelectuais oferece ferramentas
+                    teóricas para compreender as relações entre raça,
+                    gênero, trabalho, produção de conhecimento e
+                    reconhecimento social.
+                </p>
+            </div>
+
+            <div class="autoras-grid">
+
+                <article class="autora">
+                    <div class="autora-cabecalho">LG</div>
+                    <div class="autora-conteudo">
+                        <span class="autora-categoria">PENSAMENTO SOCIAL BRASILEIRO</span>
+                        <h3>Lélia Gonzalez</h3>
+                        <p>
+                            Intelectual brasileira fundamental para a
+                            discussão das relações entre racismo, sexismo,
+                            cultura e sociedade. Sua produção contribui
+                            para pensar a experiência das mulheres negras
+                            no contexto brasileiro.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="autora">
+                    <div class="autora-cabecalho">SC</div>
+                    <div class="autora-conteudo">
+                        <span class="autora-categoria">FEMINISMO NEGRO</span>
+                        <h3>Sueli Carneiro</h3>
+                        <p>
+                            Filósofa e ativista brasileira. Suas reflexões
+                            sobre racismo, sexismo, epistemicídio e
+                            desigualdades contribuem para discutir
+                            reconhecimento e produção de conhecimento.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="autora">
+                    <div class="autora-cabecalho">PC</div>
+                    <div class="autora-conteudo">
+                        <span class="autora-categoria">INTERSECCIONALIDADE</span>
+                        <h3>Patricia Hill Collins</h3>
+                        <p>
+                            Socióloga estadunidense que desenvolve
+                            contribuições importantes para compreender
+                            a interseção entre raça, gênero, classe
+                            e produção de conhecimento.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="autora">
+                    <div class="autora-cabecalho">CA</div>
+                    <div class="autora-conteudo">
+                        <span class="autora-categoria">FEMINISMO NEGRO BRASILEIRO</span>
+                        <h3>Carla Akotirene</h3>
+                        <p>
+                            Pesquisadora brasileira que discute
+                            interseccionalidade como ferramenta
+                            para compreender relações de poder
+                            e desigualdades sociais.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="autora">
+                    <div class="autora-cabecalho">AP</div>
+                    <div class="autora-conteudo">
+                        <span class="autora-categoria">GÊNERO E RELAÇÕES RACIAIS</span>
+                        <h3>Ana Cláudia Lemos Pacheco</h3>
+                        <p>
+                            Pesquisadora cujas contribuições sobre
+                            mulheres negras, relações raciais,
+                            gênero e experiências sociais dialogam
+                            com o objeto desta investigação.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="autora">
+                    <div class="autora-cabecalho">CS</div>
+                    <div class="autora-conteudo">
+                        <span class="autora-categoria">ESTUDOS DE GÊNERO</span>
+                        <h3>Cecília Maria Bacellar Sardenberg</h3>
+                        <p>
+                            Pesquisadora brasileira com contribuições
+                            para os estudos feministas e de gênero,
+                            relevantes para a reflexão sobre relações
+                            sociais e estruturas institucionais.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="relacao">
+
+        <div class="relacao-container">
+
+            <span class="etiqueta">DIÁLOGO COM O OBJETO DE ESTUDO</span>
+
+            <h2>Como o referencial teórico se conecta à pesquisa?</h2>
+
+            <p>
+                As contribuições dessas autoras permitem construir
+                uma leitura crítica das experiências de mulheres negras
+                na universidade. A discussão não se limita à presença
+                numérica nos espaços científicos: considera também
+                as condições de trabalho, as relações institucionais,
+                o reconhecimento intelectual e as oportunidades
+                de continuidade.
+            </p>
+
+            <p>
+                A articulação dessas perspectivas orienta a análise
+                das desigualdades que podem atravessar a produção
+                científica na Universidade Federal da Bahia.
+            </p>
+
+            <div class="relacao-destaque">
+                A questão central não é apenas quem consegue entrar
+                na ciência, mas também quem encontra condições
+                para produzir conhecimento e permanecer.
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="referencias">
+
+        <div class="referencias-container">
+
+            <span class="etiqueta">CAMINHOS DE LEITURA</span>
+
+            <h2>Referências teóricas</h2>
+
+            <p class="texto-secao">
+                A seleção abaixo indica autoras que integram o horizonte
+                teórico da investigação. As referências bibliográficas
+                completas, com edição, ano e dados de publicação,
+                devem ser conferidas e consolidadas na bibliografia final
+                do trabalho.
+            </p>
+
+            <div class="referencia">
+                <strong>GONZALEZ, Lélia.</strong>
+                Produção intelectual sobre racismo, sexismo e cultura brasileira.
+            </div>
+
+            <div class="referencia">
+                <strong>CARNEIRO, Sueli.</strong>
+                Produção intelectual sobre racismo, sexismo e epistemicídio.
+            </div>
+
+            <div class="referencia">
+                <strong>COLLINS, Patricia Hill.</strong>
+                Produção intelectual sobre pensamento feminista negro
+                e interseccionalidade.
+            </div>
+
+            <div class="referencia">
+                <strong>AKOTIRENE, Carla.</strong>
+                Produção intelectual sobre interseccionalidade
+                e feminismo negro.
+            </div>
+
+            <div class="referencia">
+                <strong>PACHECO, Ana Cláudia Lemos.</strong>
+                Produção acadêmica sobre mulheres negras,
+                gênero e relações raciais.
+            </div>
+
+            <div class="referencia">
+                <strong>SARDENBERG, Cecília Maria Bacellar.</strong>
+                Produção acadêmica sobre estudos feministas e gênero.
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <div class="nota">
+        <strong>Nota sobre o desenvolvimento teórico:</strong>
+        esta página apresenta uma organização inicial das perspectivas
+        que orientam a pesquisa. A seleção de obras específicas,
+        citações diretas e referências bibliográficas completas
+        será aprofundada e conferida durante a revisão bibliográfica.
+    </div>
+
+
+    <section class="chamada">
+
+        <h2>
+            Compreender as estruturas é fundamental
+            para transformar as condições de permanência.
+        </h2>
+
+        <p>
+            Conheça os procedimentos e caminhos metodológicos
+            desta investigação.
+        </p>
+
+        <a href="metodologia.html" class="botao">
+            Conhecer a metodologia →
+        </a>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="rodape-conteudo">
+
+        <div class="rodape-logo">
+            <span class="logo-simbolo">✳</span>
+            <span>Observatório<br>Mulheres Negras<br>na Ciência</span>
+        </div>
+
+        <div class="rodape-texto">
+            Pesquisa sobre desigualdades profissionais e condições
+            de permanência na produção científica da Universidade
+            Federal da Bahia.
+        </div>
+
+        <div class="rodape-ufba">UFBA</div>
+
+    </div>
+
+    <div class="rodape-final">
+        © <span id="ano"></span> Observatório Mulheres Negras na Ciência.
+        Projeto de pesquisa em desenvolvimento.
+    </div>
+
+</footer>
+
+
+<script>
+const botaoMenu = document.getElementById("menuBotao");
+const menu = document.getElementById("menu");
+
+botaoMenu.addEventListener("click", function () {
+    const aberto = menu.classList.toggle("aberto");
+    botaoMenu.setAttribute("aria-expanded", aberto);
+    botaoMenu.textContent = aberto ? "✕" : "☰";
+});
+
+menu.querySelectorAll("a").forEach(function (link) {
+    link.addEventListener("click", function () {
+        menu.classList.remove("aberto");
+        botaoMenu.setAttribute("aria-expanded", "false");
+        botaoMenu.textContent = "☰";
+    });
+});
+
+document.getElementById("ano").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

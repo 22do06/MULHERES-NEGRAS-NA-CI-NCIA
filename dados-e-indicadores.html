@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Fontes de dados e indicadores sobre mulheres negras, desigualdades e permanência na ciência.">
+<title>Dados e Indicadores | Observatório Mulheres Negras na Ciência</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --fundo: #F7F5F1;
+    --marrom: #292622;
+    --marrom-claro: #43291D;
+    --terracota: #955331;
+    --terracota-escuro: #713B22;
+    --bege: #EEE8DF;
+    --texto: #292724;
+    --branco: #FFFFFF;
+    --borda: #DED7CE;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--fundo);
+    color: var(--texto);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* CABEÇALHO */
+
+header {
+    background: var(--marrom);
+    color: white;
+    padding: 17px 6%;
+    position: relative;
+    z-index: 10;
+}
+
+.cabecalho {
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+.logo-simbolo {
+    width: 53px;
+    height: 53px;
+    display: grid;
+    place-items: center;
+    background: var(--terracota);
+    border-radius: 50%;
+    font-size: 29px;
+}
+
+nav {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+
+nav a {
+    color: #F2E9DF;
+    font-size: 12px;
+    transition: .3s;
+}
+
+nav a:hover,
+nav a.ativo {
+    color: #D88A59;
+}
+
+.menu-botao {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* CAPA */
+
+.capa {
+    background:
+        radial-gradient(circle at 85% 30%, rgba(183, 103, 59, .35), transparent 30%),
+        linear-gradient(120deg, #292622, #513122 65%, #75432B);
+    color: white;
+    padding: 100px 8% 110px;
+    position: relative;
+    overflow: hidden;
+}
+
+.capa::after {
+    content: "✳";
+    position: absolute;
+    right: 7%;
+    top: -60px;
+    font-size: 350px;
+    color: rgba(255,255,255,.045);
+}
+
+.capa-conteudo {
+    max-width: 900px;
+    position: relative;
+    z-index: 1;
+}
+
+.capa small {
+    color: #E3A078;
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-size: 12px;
+}
+
+.capa h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(45px, 7vw, 78px);
+    line-height: 1.05;
+    margin: 25px 0;
+}
+
+.capa h1 span {
+    color: #D88A59;
+}
+
+.capa p {
+    max-width: 700px;
+    color: #E9D9CB;
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    line-height: 1.6;
+}
+
+/* TRILHA */
+
+.trilha {
+    padding: 18px 8%;
+    background: var(--bege);
+    font-size: 13px;
+    color: #71665D;
+}
+
+.trilha a {
+    color: var(--terracota-escuro);
+    font-weight: 700;
+}
+
+/* SEÇÕES */
+
+.secao {
+    max-width: 1200px;
+    margin: auto;
+    padding: 85px 7%;
+}
+
+.etiqueta {
+    color: var(--terracota);
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--marrom-claro);
+    font-size: clamp(32px, 4vw, 46px);
+    line-height: 1.15;
+    margin: 20px 0;
+}
+
+.texto {
+    max-width: 950px;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+/* DESTAQUE */
+
+.destaque {
+    background: var(--marrom-claro);
+    color: white;
+    padding: 65px 8%;
+}
+
+.destaque-conteudo {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.destaque h2 {
+    color: white;
+}
+
+.destaque p {
+    color: #E8D8CA;
+    line-height: 1.9;
+    font-size: 15px;
+}
+
+.destaque-frase {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    line-height: 1.5;
+    color: #F2D6C0;
+    border-left: 3px solid #D88A59;
+    padding-left: 25px;
+}
+
+/* INDICADORES */
+
+.indicadores {
+    background: var(--bege);
+    padding: 85px 7%;
+}
+
+.indicadores-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.indicadores-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 35px;
+}
+
+.indicador {
+    background: white;
+    border: 1px solid var(--borda);
+    padding: 30px;
+    transition: .3s;
+}
+
+.indicador:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(60, 35, 20, .07);
+}
+
+.indicador-numero {
+    color: var(--terracota);
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.indicador h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--marrom-claro);
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.indicador p {
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* FONTES */
+
+.fontes {
+    padding: 85px 7%;
+}
+
+.fontes-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.lista-fontes {
+    display: grid;
+    gap: 17px;
+    margin-top: 35px;
+}
+
+.fonte {
+    display: grid;
+    grid-template-columns: 75px 1fr auto;
+    align-items: center;
+    gap: 22px;
+    background: white;
+    border: 1px solid var(--borda);
+    padding: 25px;
+    transition: .3s;
+}
+
+.fonte:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(60, 35, 20, .06);
+}
+
+.fonte-simbolo {
+    width: 65px;
+    height: 65px;
+    background: var(--bege);
+    color: var(--terracota-escuro);
+    display: grid;
+    place-items: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.fonte h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--marrom-claro);
+    font-size: 23px;
+    margin-bottom: 8px;
+}
+
+.fonte p {
+    font-size: 13px;
+    line-height: 1.8;
+    color: #625A53;
+}
+
+.fonte-link {
+    display: inline-block;
+    background: var(--terracota-escuro);
+    color: white;
+    padding: 11px 17px;
+    border-radius: 25px;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: .3s;
+}
+
+.fonte-link:hover {
+    background: var(--marrom-claro);
+}
+
+/* CRUZAMENTO */
+
+.cruzamento {
+    background: var(--bege);
+    padding: 85px 7%;
+}
+
+.cruzamento-container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.cruzamento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 17px;
+    margin-top: 35px;
+}
+
+.cruzamento-item {
+    background: white;
+    padding: 25px;
+    border-top: 3px solid var(--terracota);
+}
+
+.cruzamento-item h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--marrom-claro);
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.cruzamento-item p {
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* CUIDADOS */
+
+.cuidados {
+    padding: 85px 7%;
+}
+
+.cuidados-container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.cuidado {
+    background: white;
+    border: 1px solid var(--borda);
+    padding: 28px;
+    margin-top: 20px;
+}
+
+.cuidado h3 {
+    color: var(--marrom-claro);
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.cuidado p {
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* AVISO */
+
+.aviso {
+    background: #F7F5F1;
+    border-left: 4px solid var(--terracota);
+    padding: 22px 25px;
+    margin-top: 25px;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+/* NAVEGAÇÃO */
+
+.navegacao {
+    background: var(--terracota-escuro);
+    color: white;
+    padding: 65px 8%;
+    text-align: center;
+}
+
+.navegacao h2 {
+    color: white;
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+.navegacao p {
+    color: #F0DCCB;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.botao {
+    display: inline-block;
+    background: #F7F0E6;
+    color: var(--terracota-escuro);
+    padding: 14px 25px;
+    border-radius: 30px;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.botao:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+/* RODAPÉ */
+
+footer {
+    background: var(--marrom);
+    color: white;
+    padding: 45px 8% 20px;
+}
+
+.rodape-conteudo {
+    max-width: 1300px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    gap: 30px;
+    align-items: center;
+    padding-bottom: 35px;
+}
+
+.rodape-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+}
+
+.rodape-texto {
+    border-left: 1px solid var(--terracota);
+    padding-left: 25px;
+    color: #E5D5C7;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.rodape-ufba {
+    text-align: right;
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+}
+
+.rodape-final {
+    border-top: 1px solid #68432F;
+    padding-top: 20px;
+    text-align: center;
+    color: #CDB9A8;
+    font-size: 12px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 950px) {
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 10px;
+    }
+
+    .cruzamento-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 760px) {
+    header {
+        padding: 15px 6%;
+    }
+
+    .menu-botao {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 25px 7%;
+        background: var(--marrom);
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav.aberto {
+        display: flex;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .capa {
+        padding: 75px 7%;
+    }
+
+    .capa h1 {
+        font-size: 46px;
+    }
+
+    .capa p {
+        font-size: 18px;
+    }
+
+    .secao,
+    .fontes,
+    .cuidados {
+        padding: 65px 7%;
+    }
+
+    .destaque-conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .indicadores,
+    .cruzamento {
+        padding: 65px 7%;
+    }
+
+    .indicadores-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fonte {
+        grid-template-columns: 55px 1fr;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .fonte-simbolo {
+        width: 50px;
+        height: 50px;
+        font-size: 17px;
+    }
+
+    .fonte-link {
+        grid-column: 2;
+        justify-self: start;
+    }
+
+    .rodape-conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .rodape-texto {
+        border-left: none;
+        border-top: 1px solid var(--terracota);
+        padding: 20px 0 0;
+    }
+
+    .rodape-ufba {
+        text-align: left;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="cabecalho">
+
+        <a href="../index.html" class="logo">
+            <span class="logo-simbolo">✳</span>
+            <span>Observatório<br>Mulheres Negras<br>na Ciência</span>
+        </a>
+
+        <button class="menu-botao" id="menuBotao"
+            aria-label="Abrir menu" aria-expanded="false">☰</button>
+
+        <nav id="menu">
+            <a href="../index.html">Início</a>
+            <a href="../sobre.html">Sobre</a>
+            <a href="index.html">Pesquisa</a>
+            <a href="referencial-teorico.html">Referencial Teórico</a>
+            <a href="metodologia.html">Metodologia</a>
+            <a href="dados-e-indicadores.html" class="ativo">Dados e Indicadores</a>
+            <a href="resultados.html">Resultados</a>
+            <a href="publicacoes.html">Publicações</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<main>
+
+    <section class="capa">
+        <div class="capa-conteudo">
+
+            <small>INFORMAÇÃO, PESQUISA E DESIGUALDADE</small>
+
+            <h1>
+                Dados e<br>
+                <span>indicadores</span>
+            </h1>
+
+            <p>
+                Investigar as desigualdades na ciência também exige
+                observar os dados, compreender suas limitações
+                e identificar quem tem acesso às oportunidades
+                de produzir conhecimento.
+            </p>
+
+        </div>
+    </section>
+
+
+    <div class="trilha">
+        <a href="../index.html">Início</a> /
+        <a href="index.html">Pesquisa</a> /
+        Dados e Indicadores
+    </div>
+
+
+    <section class="secao">
+
+        <span class="etiqueta">01 — INFORMAÇÕES PARA A INVESTIGAÇÃO</span>
+
+        <h2>O que os dados podem revelar?</h2>
+
+        <p class="texto">
+            A análise das desigualdades na produção científica
+            exige observar como mulheres negras participam
+            dos espaços acadêmicos, quais oportunidades estão
+            disponíveis e quais condições influenciam suas
+            trajetórias profissionais.
+        </p>
+
+        <p class="texto">
+            Nesta pesquisa, os dados e indicadores serão utilizados
+            como instrumentos para investigar aspectos relacionados
+            à formação acadêmica, à participação na pesquisa,
+            ao acesso a bolsas e financiamentos e às condições
+            de permanência na Universidade Federal da Bahia.
+        </p>
+
+        <p class="texto">
+            A consulta às bases institucionais poderá contribuir
+            para contextualizar o problema, identificar informações
+            disponíveis e reconhecer possíveis lacunas na produção
+            de dados sobre raça e gênero na ciência.
+        </p>
+
+    </section>
+
+
+    <section class="destaque">
+
+        <div class="destaque-conteudo">
+
+            <div>
+                <span class="etiqueta">UM OLHAR CRÍTICO SOBRE OS DADOS</span>
+
+                <h2>Nem tudo que importa aparece nas estatísticas</h2>
+
+                <p>
+                    Os indicadores quantitativos podem mostrar
+                    diferenças de participação e acesso, mas
+                    nem sempre explicam as experiências, relações
+                    institucionais e barreiras que atravessam
+                    a trajetória das pesquisadoras.
+                </p>
+
+            </div>
+
+            <div class="destaque-frase">
+                Quantificar desigualdades é importante.
+                Compreender suas estruturas também é necessário.
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="indicadores">
+
+        <div class="indicadores-container">
+
+            <span class="etiqueta">02 — DIMENSÕES DE ANÁLISE</span>
+
+            <h2>Quais indicadores serão observados?</h2>
+
+            <p class="texto">
+                Os seguintes aspectos orientam o levantamento
+                de informações. A disponibilidade e o nível
+                de detalhamento dos dados ainda deverão ser
+                verificados nas fontes consultadas.
+            </p>
+
+            <div class="indicadores-grid">
+
+                <article class="indicador">
+
+                    <div class="indicador-numero">01</div>
+
+                    <h3>Formação acadêmica</h3>
+
+                    <p>
+                        Informações sobre ingresso, matrícula,
+                        conclusão de cursos de graduação e
+                        pós-graduação, considerando possíveis
+                        diferenças relacionadas a raça e gênero.
+                    </p>
+
+                </article>
+
+
+                <article class="indicador">
+
+                    <div class="indicador-numero">02</div>
+
+                    <h3>Participação na pesquisa</h3>
+
+                    <p>
+                        Presença de mulheres em grupos de pesquisa,
+                        projetos científicos, programas de iniciação
+                        científica e atividades de produção acadêmica.
+                    </p>
+
+                </article>
+
+
+                <article class="indicador">
+
+                    <div class="indicador-numero">03</div>
+
+                    <h3>Bolsas e financiamento</h3>
+
+                    <p>
+                        Distribuição de bolsas, oportunidades
+                        de financiamento, editais e recursos
+                        destinados ao desenvolvimento de pesquisas.
+                    </p>
+
+                </article>
+
+
+                <article class="indicador">
+
+                    <div class="indicador-numero">04</div>
+
+                    <h3>Trajetória profissional</h3>
+
+                    <p>
+                        Informações sobre vínculos acadêmicos,
+                        atuação profissional, continuidade
+                        na pesquisa e participação em espaços
+                        de produção científica.
+                    </p>
+
+                </article>
+
+
+                <article class="indicador">
+
+                    <div class="indicador-numero">05</div>
+
+                    <h3>Reconhecimento científico</h3>
+
+                    <p>
+                        Participação em publicações, eventos,
+                        orientações, coordenação de projetos
+                        e outras formas de reconhecimento
+                        do trabalho intelectual.
+                    </p>
+
+                </article>
+
+
+                <article class="indicador">
+
+                    <div class="indicador-numero">06</div>
+
+                    <h3>Políticas de permanência</h3>
+
+                    <p>
+                        Programas e iniciativas institucionais
+                        voltados à inclusão, à equidade,
+                        ao apoio financeiro e à continuidade
+                        das trajetórias acadêmicas.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="fontes">
+
+        <div class="fontes-container">
+
+            <span class="etiqueta">03 — FONTES DE INFORMAÇÃO</span>
+
+            <h2>Onde buscar os dados?</h2>
+
+            <p class="texto">
+                O levantamento poderá utilizar bases públicas,
+                plataformas institucionais e documentos oficiais.
+                As fontes abaixo são pontos de partida para a
+                identificação de informações relevantes.
+            </p>
+
+            <div class="lista-fontes">
+
+                <article class="fonte">
+
+                    <div class="fonte-simbolo">INEP</div>
+
+                    <div>
+                        <h3>Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira</h3>
+
+                        <p>
+                            Produz estatísticas e indicadores
+                            sobre educação brasileira. O Censo
+                            da Educação Superior poderá contribuir
+                            para investigar ingresso, matrícula,
+                            conclusão e características da educação
+                            superior.
+                        </p>
+                    </div>
+
+                    <a class="fonte-link"
+                       href="https://www.gov.br/inep/pt-br"
+                       target="_blank" rel="noopener noreferrer">
+                        Acessar INEP ↗
+                    </a>
+
+                </article>
+
+
+                <article class="fonte">
+
+                    <div class="fonte-simbolo">CNPq</div>
+
+                    <div>
+                        <h3>Conselho Nacional de Desenvolvimento Científico e Tecnológico</h3>
+
+                        <p>
+                            Disponibiliza informações sobre fomento
+                            à pesquisa, bolsas, grupos de pesquisa
+                            e produção científica. O Diretório
+                            dos Grupos de Pesquisa e as informações
+                            institucionais poderão apoiar o levantamento.
+                        </p>
+                    </div>
+
+                    <a class="fonte-link"
+                       href="https://www.gov.br/cnpq/pt-br"
+                       target="_blank" rel="noopener noreferrer">
+                        Acessar CNPq ↗
+                    </a>
+
+                </article>
+
+
+                <article class="fonte">
+
+                    <div class="fonte-simbolo">CAPES</div>
+
+                    <div>
+                        <h3>Coordenação de Aperfeiçoamento de Pessoal de Nível Superior</h3>
+
+                        <p>
+                            Reúne informações sobre pós-graduação,
+                            formação de pesquisadores, bolsas
+                            e avaliação da produção acadêmica.
+                            Seus dados poderão contribuir para
+                            compreender a formação científica.
+                        </p>
+                    </div>
+
+                    <a class="fonte-link"
+                       href="https://www.gov.br/capes/pt-br"
+                       target="_blank" rel="noopener noreferrer">
+                        Acessar CAPES ↗
+                    </a>
+
+                </article>
+
+
+                <article class="fonte">
+
+                    <div class="fonte-simbolo">UFBA</div>
+
+                    <div>
+                        <h3>Universidade Federal da Bahia</h3>
+
+                        <p>
+                            Documentos institucionais, editais,
+                            relatórios, informações sobre pesquisa,
+                            programas de bolsas e políticas
+                            de permanência poderão ajudar a
+                            compreender o contexto específico
+                            da universidade.
+                        </p>
+                    </div>
+
+                    <a class="fonte-link"
+                       href="https://www.ufba.br/"
+                       target="_blank" rel="noopener noreferrer">
+                        Acessar UFBA ↗
+                    </a>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="cruzamento">
+
+        <div class="cruzamento-container">
+
+            <span class="etiqueta">04 — INTERPRETAÇÃO DOS DADOS</span>
+
+            <h2>Por que cruzar raça, gênero e trabalho?</h2>
+
+            <p class="texto">
+                Observar apenas um aspecto da trajetória acadêmica
+                pode ocultar desigualdades que se manifestam
+                de maneira simultânea. Por isso, a investigação
+                considera a relação entre diferentes dimensões
+                da vida profissional e acadêmica.
+            </p>
+
+            <div class="cruzamento-grid">
+
+                <article class="cruzamento-item">
+                    <h3>Raça</h3>
+                    <p>
+                        Investigar como o racismo e as desigualdades
+                        raciais podem influenciar o acesso,
+                        o reconhecimento e as oportunidades
+                        na produção científica.
+                    </p>
+                </article>
+
+                <article class="cruzamento-item">
+                    <h3>Gênero</h3>
+                    <p>
+                        Observar as relações de gênero na
+                        organização do trabalho acadêmico,
+                        na divisão de responsabilidades
+                        e nas possibilidades de desenvolvimento
+                        profissional.
+                    </p>
+                </article>
+
+                <article class="cruzamento-item">
+                    <h3>Classe e trabalho</h3>
+                    <p>
+                        Considerar as condições materiais,
+                        econômicas e profissionais que podem
+                        influenciar a continuidade das trajetórias
+                        de mulheres negras na ciência.
+                    </p>
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="cuidados">
+
+        <div class="cuidados-container">
+
+            <span class="etiqueta">05 — LIMITES E CUIDADOS</span>
+
+            <h2>O que os indicadores não mostram sozinhos?</h2>
+
+            <p class="texto">
+                A disponibilidade de dados sobre raça e gênero
+                pode variar entre instituições, períodos e bases
+                de informação. Por isso, o levantamento deverá
+                considerar a origem, a abrangência e os critérios
+                utilizados na produção de cada indicador.
+            </p>
+
+            <div class="cuidado">
+
+                <h3>Disponibilidade das informações</h3>
+
+                <p>
+                    Nem todas as bases apresentam dados
+                    desagregados simultaneamente por raça,
+                    gênero, vínculo institucional e área
+                    de conhecimento. A ausência de determinada
+                    informação deverá ser registrada como
+                    uma limitação da análise.
+                </p>
+
+            </div>
+
+
+            <div class="cuidado">
+
+                <h3>Comparabilidade</h3>
+
+                <p>
+                    Diferenças nos períodos, conceitos,
+                    classificações e métodos de coleta podem
+                    dificultar comparações entre instituições
+                    e conjuntos de dados. Cada informação
+                    deverá ser analisada considerando
+                    seu contexto de produção.
+                </p>
+
+            </div>
+
+
+            <div class="cuidado">
+
+                <h3>Interpretação crítica</h3>
+
+                <p>
+                    Indicadores não explicam isoladamente
+                    as causas das desigualdades. A interpretação
+                    deverá dialogar com a bibliografia,
+                    os documentos institucionais e, caso
+                    sejam realizadas, as experiências
+                    das participantes da pesquisa.
+                </p>
+
+            </div>
+
+
+            <div class="aviso">
+                <strong>Importante:</strong>
+                esta página apresenta dimensões de investigação
+                e fontes potenciais. Os indicadores ainda precisam
+                ser levantados, conferidos e analisados.
+                Nenhum número apresentado aqui representa
+                um resultado já obtido pela pesquisa.
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="navegacao">
+
+        <h2>Dos dados à compreensão das desigualdades</h2>
+
+        <p>
+            Conheça os resultados que a investigação pretende
+            alcançar e as contribuições esperadas para o debate
+            sobre mulheres negras na ciência.
+        </p>
+
+        <a href="resultados.html" class="botao">
+            Conhecer os resultados esperados →
+        </a>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="rodape-conteudo">
+
+        <div class="rodape-logo">
+            <span class="logo-simbolo">✳</span>
+            <span>Observatório<br>Mulheres Negras<br>na Ciência</span>
+        </div>
+
+        <div class="rodape-texto">
+            Pesquisa sobre desigualdades profissionais e condições
+            de permanência na produção científica da Universidade
+            Federal da Bahia.
+        </div>
+
+        <div class="rodape-ufba">UFBA</div>
+
+    </div>
+
+    <div class="rodape-final">
+        © <span id="ano"></span> Observatório Mulheres Negras na Ciência.
+        Projeto de pesquisa em desenvolvimento.
+    </div>
+
+</footer>
+
+
+<script>
+const botaoMenu = document.getElementById("menuBotao");
+const menu = document.getElementById("menu");
+
+botaoMenu.addEventListener("click", function () {
+    const aberto = menu.classList.toggle("aberto");
+
+    botaoMenu.setAttribute("aria-expanded", aberto);
+    botaoMenu.textContent = aberto ? "✕" : "☰";
+});
+
+menu.querySelectorAll("a").forEach(function (link) {
+    link.addEventListener("click", function () {
+        menu.classList.remove("aberto");
+        botaoMenu.setAttribute("aria-expanded", "false");
+        botaoMenu.textContent = "☰";
+    });
+});
+
+document.getElementById("ano").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

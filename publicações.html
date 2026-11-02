@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Publicações, produções acadêmicas e materiais da pesquisa Mulheres Negras na Ciência.">
+<title>Publicações | Observatório Mulheres Negras na Ciência</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --fundo: #F7F5F1;
+    --marrom: #292622;
+    --marrom-claro: #43291D;
+    --terracota: #955331;
+    --terracota-escuro: #713B22;
+    --bege: #EEE8DF;
+    --texto: #292724;
+    --branco: #FFFFFF;
+    --borda: #DED7CE;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--fundo);
+    color: var(--texto);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* CABEÇALHO */
+
+header {
+    background: var(--marrom);
+    color: white;
+    padding: 17px 6%;
+    position: relative;
+    z-index: 10;
+}
+
+.cabecalho {
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+.logo-simbolo {
+    width: 53px;
+    height: 53px;
+    display: grid;
+    place-items: center;
+    background: var(--terracota);
+    border-radius: 50%;
+    font-size: 29px;
+}
+
+nav {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+
+nav a {
+    color: #F2E9DF;
+    font-size: 12px;
+    transition: .3s;
+}
+
+nav a:hover,
+nav a.ativo {
+    color: #D88A59;
+}
+
+.menu-botao {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* CAPA */
+
+.capa {
+    background:
+        radial-gradient(circle at 85% 30%, rgba(183, 103, 59, .35), transparent 30%),
+        linear-gradient(120deg, #292622, #513122 65%, #75432B);
+    color: white;
+    padding: 100px 8% 110px;
+    position: relative;
+    overflow: hidden;
+}
+
+.capa::after {
+    content: "✳";
+    position: absolute;
+    right: 7%;
+    top: -60px;
+    font-size: 350px;
+    color: rgba(255,255,255,.045);
+}
+
+.capa-conteudo {
+    max-width: 900px;
+    position: relative;
+    z-index: 1;
+}
+
+.capa small {
+    color: #E3A078;
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-size: 12px;
+}
+
+.capa h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(45px, 7vw, 78px);
+    line-height: 1.05;
+    margin: 25px 0;
+}
+
+.capa h1 span {
+    color: #D88A59;
+}
+
+.capa p {
+    max-width: 700px;
+    color: #E9D9CB;
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    line-height: 1.6;
+}
+
+/* TRILHA */
+
+.trilha {
+    padding: 18px 8%;
+    background: var(--bege);
+    font-size: 13px;
+    color: #71665D;
+}
+
+.trilha a {
+    color: var(--terracota-escuro);
+    font-weight: 700;
+}
+
+/* INTRODUÇÃO */
+
+.introducao {
+    max-width: 1200px;
+    margin: auto;
+    padding: 85px 7%;
+}
+
+.etiqueta {
+    color: var(--terracota);
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--marrom-claro);
+    font-size: clamp(32px, 4vw, 46px);
+    line-height: 1.15;
+    margin: 20px 0;
+}
+
+.introducao p,
+.texto-secao {
+    max-width: 900px;
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+/* DESTAQUE */
+
+.destaque {
+    background: var(--marrom-claro);
+    color: white;
+    padding: 55px 8%;
+}
+
+.destaque-conteudo {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    align-items: center;
+}
+
+.destaque h2 {
+    color: white;
+    margin-top: 15px;
+}
+
+.destaque p {
+    color: #E8D8CA;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.destaque-frase {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    line-height: 1.5;
+    color: #F2D6C0;
+    border-left: 3px solid #D88A59;
+    padding-left: 25px;
+}
+
+/* TIPOS DE PUBLICAÇÃO */
+
+.producoes {
+    padding: 85px 7%;
+}
+
+.producoes-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.producoes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 40px;
+}
+
+.producao {
+    background: white;
+    border: 1px solid var(--borda);
+    padding: 30px;
+    min-height: 265px;
+    transition: .3s;
+}
+
+.producao:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(60, 35, 20, .08);
+}
+
+.producao-icone {
+    width: 52px;
+    height: 52px;
+    background: var(--bege);
+    color: var(--terracota-escuro);
+    display: grid;
+    place-items: center;
+    font-size: 24px;
+    margin-bottom: 23px;
+}
+
+.producao h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--marrom-claro);
+    font-size: 23px;
+    margin-bottom: 13px;
+}
+
+.producao p {
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* ACERVO */
+
+.acervo {
+    background: var(--bege);
+    padding: 85px 7%;
+}
+
+.acervo-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.acervo-cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 25px;
+    margin-bottom: 35px;
+}
+
+.acervo-cabecalho p {
+    max-width: 500px;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.lista-publicacoes {
+    display: grid;
+    gap: 15px;
+}
+
+.publicacao {
+    background: white;
+    padding: 25px 28px;
+    display: grid;
+    grid-template-columns: 65px 1fr auto;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid var(--borda);
+}
+
+.publicacao-numero {
+    width: 52px;
+    height: 60px;
+    background: var(--marrom-claro);
+    color: #F2D6C0;
+    display: grid;
+    place-items: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+}
+
+.publicacao h3 {
+    color: var(--marrom-claro);
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    margin-bottom: 7px;
+}
+
+.publicacao p {
+    font-size: 13px;
+    line-height: 1.7;
+    color: #625A53;
+}
+
+.status {
+    display: inline-block;
+    background: var(--bege);
+    color: var(--terracota-escuro);
+    padding: 8px 12px;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* AVISO */
+
+.aviso {
+    margin-top: 30px;
+    background: #F7F5F1;
+    border-left: 4px solid var(--terracota);
+    padding: 22px 25px;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* COMPARTILHAMENTO */
+
+.compartilhamento {
+    padding: 85px 8%;
+}
+
+.compartilhamento-container {
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+
+.compartilhamento p {
+    max-width: 750px;
+    margin: 0 auto 25px;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.compartilhamento h2 {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.botao {
+    display: inline-block;
+    background: var(--terracota-escuro);
+    color: white;
+    padding: 14px 25px;
+    border-radius: 30px;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.botao:hover {
+    background: var(--marrom-claro);
+    transform: translateY(-3px);
+}
+
+/* NAVEGAÇÃO FINAL */
+
+.navegacao {
+    background: var(--terracota-escuro);
+    color: white;
+    padding: 65px 8%;
+    text-align: center;
+}
+
+.navegacao h2 {
+    color: white;
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+.navegacao p {
+    color: #F0DCCB;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.navegacao .botao {
+    background: #F7F0E6;
+    color: var(--terracota-escuro);
+}
+
+.navegacao .botao:hover {
+    background: white;
+}
+
+/* RODAPÉ */
+
+footer {
+    background: var(--marrom);
+    color: white;
+    padding: 45px 8% 20px;
+}
+
+.rodape-conteudo {
+    max-width: 1300px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    gap: 30px;
+    align-items: center;
+    padding-bottom: 35px;
+}
+
+.rodape-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+}
+
+.rodape-texto {
+    border-left: 1px solid var(--terracota);
+    padding-left: 25px;
+    color: #E5D5C7;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.rodape-ufba {
+    text-align: right;
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+}
+
+.rodape-final {
+    border-top: 1px solid #68432F;
+    padding-top: 20px;
+    text-align: center;
+    color: #CDB9A8;
+    font-size: 12px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 950px) {
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 10px;
+    }
+
+    .producoes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 760px) {
+    header {
+        padding: 15px 6%;
+    }
+
+    .menu-botao {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 25px 7%;
+        background: var(--marrom);
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav.aberto {
+        display: flex;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .capa {
+        padding: 75px 7%;
+    }
+
+    .capa h1 {
+        font-size: 46px;
+    }
+
+    .capa p {
+        font-size: 18px;
+    }
+
+    .introducao,
+    .producoes,
+    .acervo,
+    .compartilhamento {
+        padding: 65px 7%;
+    }
+
+    .destaque-conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .producoes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .acervo-cabecalho {
+        display: block;
+    }
+
+    .publicacao {
+        grid-template-columns: 55px 1fr;
+        gap: 15px;
+    }
+
+    .publicacao .status {
+        grid-column: 2;
+        justify-self: start;
+    }
+
+    .rodape-conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .rodape-texto {
+        border-left: none;
+        border-top: 1px solid var(--terracota);
+        padding: 20px 0 0;
+    }
+
+    .rodape-ufba {
+        text-align: left;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="cabecalho">
+
+        <a href="../index.html" class="logo">
+            <span class="logo-simbolo">✳</span>
+            <span>Observatório<br>Mulheres Negras<br>na Ciência</span>
+        </a>
+
+        <button class="menu-botao" id="menuBotao"
+            aria-label="Abrir menu" aria-expanded="false">☰</button>
+
+        <nav id="menu">
+            <a href="../index.html">Início</a>
+            <a href="../sobre.html">Sobre</a>
+            <a href="index.html">Pesquisa</a>
+            <a href="referencial-teorico.html">Referencial Teórico</a>
+            <a href="metodologia.html">Metodologia</a>
+            <a href="dados-e-indicadores.html">Dados e Indicadores</a>
+            <a href="resultados.html">Resultados</a>
+            <a href="publicacoes.html" class="ativo">Publicações</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<main>
+
+    <section class="capa">
+        <div class="capa-conteudo">
+
+            <small>PRODUÇÃO E DIFUSÃO DO CONHECIMENTO</small>
+
+            <h1>
+                Publicações<br>
+                <span>e produções</span>
+            </h1>
+
+            <p>
+                Um espaço para reunir textos, materiais acadêmicos,
+                documentos e produções relacionados à investigação
+                sobre mulheres negras na ciência.
+            </p>
+
+        </div>
+    </section>
+
+
+    <div class="trilha">
+        <a href="../index.html">Início</a> /
+        <a href="index.html">Pesquisa</a> /
+        Publicações
+    </div>
+
+
+    <section class="introducao">
+
+        <span class="etiqueta">PRODUÇÃO ACADÊMICA</span>
+
+        <h2>Registrar, compartilhar e ampliar o conhecimento</h2>
+
+        <p>
+            Esta página foi criada para reunir as produções acadêmicas
+            e os materiais desenvolvidos no âmbito da pesquisa
+            sobre mulheres negras, desigualdades profissionais
+            e condições de permanência na produção científica
+            da Universidade Federal da Bahia.
+        </p>
+
+        <p>
+            A proposta é organizar e disponibilizar, de maneira
+            acessível, os resultados que forem produzidos ao longo
+            da investigação, contribuindo para a circulação do
+            conhecimento e para a valorização das trajetórias
+            de pesquisadoras negras.
+        </p>
+
+    </section>
+
+
+    <section class="destaque">
+
+        <div class="destaque-conteudo">
+
+            <div>
+                <span class="etiqueta">CONHECIMENTO EM CONSTRUÇÃO</span>
+
+                <h2>Uma pesquisa que também busca compartilhar suas descobertas</h2>
+
+                <p>
+                    A divulgação científica é parte importante
+                    do compromisso desta investigação. Compartilhar
+                    conhecimentos, referências e reflexões permite
+                    ampliar o acesso às discussões sobre desigualdade,
+                    trabalho e permanência na ciência.
+                </p>
+            </div>
+
+            <div class="destaque-frase">
+                Dar visibilidade à produção intelectual de mulheres
+                negras também é reconhecer sua participação
+                na construção do conhecimento.
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="producoes">
+
+        <div class="producoes-container">
+
+            <span class="etiqueta">CATEGORIAS</span>
+
+            <h2>O que poderá ser encontrado nesta página?</h2>
+
+            <p class="texto-secao">
+                Os materiais serão organizados conforme forem
+                desenvolvidos e revisados durante a pesquisa.
+            </p>
+
+            <div class="producoes-grid">
+
+                <article class="producao">
+                    <div class="producao-icone">▤</div>
+                    <h3>Artigos científicos</h3>
+                    <p>
+                        Textos acadêmicos relacionados às discussões
+                        sobre mulheres negras, relações raciais,
+                        gênero, trabalho e ciência.
+                    </p>
+                </article>
+
+                <article class="producao">
+                    <div class="producao-icone">▧</div>
+                    <h3>Relatórios de pesquisa</h3>
+                    <p>
+                        Registros das etapas, procedimentos,
+                        análises e encaminhamentos desenvolvidos
+                        durante a investigação.
+                    </p>
+                </article>
+
+                <article class="producao">
+                    <div class="producao-icone">✎</div>
+                    <h3>Textos e ensaios</h3>
+                    <p>
+                        Reflexões e produções textuais que dialogam
+                        com os temas e as questões centrais
+                        do projeto.
+                    </p>
+                </article>
+
+                <article class="producao">
+                    <div class="producao-icone">▣</div>
+                    <h3>Materiais de divulgação</h3>
+                    <p>
+                        Conteúdos informativos e materiais
+                        de divulgação científica destinados
+                        a diferentes públicos.
+                    </p>
+                </article>
+
+                <article class="producao">
+                    <div class="producao-icone">▤</div>
+                    <h3>Apresentações acadêmicas</h3>
+                    <p>
+                        Materiais utilizados em encontros,
+                        eventos científicos, seminários
+                        e apresentações da pesquisa.
+                    </p>
+                </article>
+
+                <article class="producao">
+                    <div class="producao-icone">▥</div>
+                    <h3>Referências e documentos</h3>
+                    <p>
+                        Indicações bibliográficas e documentos
+                        que contribuam para o estudo das
+                        desigualdades na ciência.
+                    </p>
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="acervo">
+
+        <div class="acervo-container">
+
+            <div class="acervo-cabecalho">
+
+                <div>
+                    <span class="etiqueta">ACERVO DIGITAL</span>
+                    <h2>Produções da pesquisa</h2>
+                </div>
+
+                <p>
+                    Os espaços abaixo serão preenchidos com os materiais
+                    efetivamente produzidos e disponibilizados
+                    durante o desenvolvimento do projeto.
+                </p>
+
+            </div>
+
+
+            <div class="lista-publicacoes">
+
+                <article class="publicacao">
+
+                    <div class="publicacao-numero">01</div>
+
+                    <div>
+                        <h3>Projeto de pesquisa</h3>
+                        <p>
+                            Documento de apresentação da investigação,
+                            com problema, objetivos, justificativa
+                            e percurso metodológico.
+                        </p>
+                    </div>
+
+                    <span class="status">A organizar</span>
+
+                </article>
+
+
+                <article class="publicacao">
+
+                    <div class="publicacao-numero">02</div>
+
+                    <div>
+                        <h3>Relatório de desenvolvimento</h3>
+                        <p>
+                            Registro das atividades e etapas
+                            realizadas durante o desenvolvimento
+                            da investigação.
+                        </p>
+                    </div>
+
+                    <span class="status">Previsto</span>
+
+                </article>
+
+
+                <article class="publicacao">
+
+                    <div class="publicacao-numero">03</div>
+
+                    <div>
+                        <h3>Produção acadêmica</h3>
+                        <p>
+                            Artigos, resumos e outros textos
+                            que venham a ser elaborados
+                            a partir da pesquisa.
+                        </p>
+                    </div>
+
+                    <span class="status">Previsto</span>
+
+                </article>
+
+
+                <article class="publicacao">
+
+                    <div class="publicacao-numero">04</div>
+
+                    <div>
+                        <h3>Materiais de divulgação científica</h3>
+                        <p>
+                            Conteúdos destinados à apresentação
+                            e à circulação pública das discussões
+                            desenvolvidas no projeto.
+                        </p>
+                    </div>
+
+                    <span class="status">Previsto</span>
+
+                </article>
+
+
+                <article class="publicacao">
+
+                    <div class="publicacao-numero">05</div>
+
+                    <div>
+                        <h3>Produto digital da pesquisa</h3>
+                        <p>
+                            Desenvolvimento da proposta do
+                            Observatório Mulheres Negras na Ciência,
+                            como espaço de organização e divulgação
+                            de informações e materiais.
+                        </p>
+                    </div>
+
+                    <span class="status">Em desenvolvimento</span>
+
+                </article>
+
+            </div>
+
+
+            <div class="aviso">
+                <strong>Sobre a disponibilidade dos materiais:</strong>
+                esta pesquisa encontra-se em desenvolvimento.
+                Os documentos e as produções serão publicados
+                nesta página à medida que forem concluídos,
+                revisados e autorizados para divulgação.
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="compartilhamento">
+
+        <div class="compartilhamento-container">
+
+            <span class="etiqueta">DIVULGAÇÃO CIENTÍFICA</span>
+
+            <h2>O conhecimento precisa circular</h2>
+
+            <p>
+                A proposta desta página é contribuir para que
+                as discussões sobre mulheres negras na ciência
+                ultrapassem os espaços acadêmicos e possam
+                alcançar estudantes, pesquisadoras, educadores
+                e a sociedade em geral.
+            </p>
+
+            <p>
+                Ao reunir produções e materiais em um mesmo espaço,
+                o projeto busca facilitar o acesso às informações
+                e fortalecer a visibilidade das contribuições
+                intelectuais de mulheres negras.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="navegacao">
+
+        <h2>Continue conhecendo a pesquisa</h2>
+
+        <p>
+            Consulte os resultados esperados e as contribuições
+            que a investigação pretende desenvolver.
+        </p>
+
+        <a href="resultados.html" class="botao">
+            Conhecer os resultados esperados →
+        </a>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="rodape-conteudo">
+
+        <div class="rodape-logo">
+            <span class="logo-simbolo">✳</span>
+            <span>Observatório<br>Mulheres Negras<br>na Ciência</span>
+        </div>
+
+        <div class="rodape-texto">
+            Pesquisa sobre desigualdades profissionais e condições
+            de permanência na produção científica da Universidade
+            Federal da Bahia.
+        </div>
+
+        <div class="rodape-ufba">UFBA</div>
+
+    </div>
+
+    <div class="rodape-final">
+        © <span id="ano"></span> Observatório Mulheres Negras na Ciência.
+        Projeto de pesquisa em desenvolvimento.
+    </div>
+
+</footer>
+
+
+<script>
+const botaoMenu = document.getElementById("menuBotao");
+const menu = document.getElementById("menu");
+
+botaoMenu.addEventListener("click", function () {
+    const aberto = menu.classList.toggle("aberto");
+
+    botaoMenu.setAttribute("aria-expanded", aberto);
+    botaoMenu.textContent = aberto ? "✕" : "☰";
+});
+
+menu.querySelectorAll("a").forEach(function (link) {
+    link.addEventListener("click", function () {
+        menu.classList.remove("aberto");
+        botaoMenu.setAttribute("aria-expanded", "false");
+        botaoMenu.textContent = "☰";
+    });
+});
+
+document.getElementById("ano").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
